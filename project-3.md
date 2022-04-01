@@ -64,4 +64,4 @@
 ### run dev with npm in Todo directory to enable your application in http url
 `npm run dev`
 ![run dev](./Images/npm_run_dev.png)
-![Application on server](./Images/access_server.png)
+![Application on server](./Images/Todo-application.png)
