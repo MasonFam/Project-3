@@ -23,20 +23,45 @@
 [server accesws with public Ip](http://54.234.189.155:5000)
 ![server acces through browser](./Images/access_server.png)
 ## Routes for Todo Application
-#Create routes directory and create a file api.js on it and also configure api.js
+# Create routes directory and create a file api.js on it and also configure api.js `mkdir routes && touch api.js && vim api.js`
 ![api.js configuration](./Images/routes_configuration.png)
 
+## Install mongoose and create new directory models to work with routes  #install mongoose`npm install mongoose`
+![mongoose install](./Images/mongoose.png)
+![cluster created](./Images/cluster-A.png)
+#create new directory models, create new file todo.js and configure `mkdir models && cd models && touch todo.js`
+# Update api.js files configuration on routes directory with `vim api.js`
+![update api.js configuration](./Images/routes_configuration_update.png)
+### connecting database `node index.js`
+![database connected succefully](./Images/node_index.js.png)
 
+### Install postman into your system and test all the API endpoints CRUD and make sure they are working 
+![GET running succesfully](./Images/GET-Test.png)
 
+![POST running succesfully](./Images/POST%20test.png)
 
-
-
-![alt text](image.jpg)
-
-
-
-
-
-
-
-![alt text](image.jpg)
+# FrontEnd Creation
+## Creating a user interface for a Web client broeser to interact with application Todo via API
+### Create a new folder in todo called client using `npx create-react-app client`
+## Installing dependies concurrently and nodemon with `npm install concurrently --save-dev && npm install nodemon --save-dev`
+![concurrently succesfuly installed](./Images/concurrently.png)
+![nodemonn succesfuly installed](./Images/nodemon.png)
+### edit the code in package.json file in Todo folder to use the dependencies
+![script edit](./Images/script%20edit.png)
+### configure proxy in client package.json file to let the application run on url without adding the path /api/todos/ `cd client && nano package.json`
+![proxy configuration](./Images/add_proxy.png)
+`npm run dev` 
+### cd client/src and then mkdir components and create Input.js, ListTodo.js and Todo.js
+`touch Input.js ListTodo.js Todo.js`
+### edit Input.js file by inserting given code, open file using `nano Input.js`
+![Input.js configuration](./Images/Input.js_file_configuration.png)
+### install axios used to make request from node.js in your client directory using
+`npm install axios` 
+### edit a ListTodo.js file in components directory using nano
+![ListTodo.js configuration](./Images/ListTodo.js_configuration.png)
+### also edit Todo.js file using nano too `nano Todo.js`
+![Todo.js configuration](./Images/Todo.js_configuration.png)
+### run dev with npm in Todo directory to enable your application in http url
+`npm run dev`
+![run dev](./Images/npm_run_dev.png)
+![Application on server](./Images/access_server.png)
